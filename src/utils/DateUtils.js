@@ -1,6 +1,6 @@
-/*
- * @param date Date日期对象，或者豪秒值
- * @param pattern 格式，如yyyy-MM-dd HH:mm:ss:SSS
+/**
+ * @param date Date日期对象，或者豪秒值，必要参数
+ * @param pattern 格式，可选参数，如yyyy-MM-dd HH:mm:ss:SSS，默认为 yyyy-MM-dd HH:mm:ss
  * @return 格式化的日期时间字符串，若失败，则原样返回date
  */
 function format(date, pattern) {
@@ -50,6 +50,26 @@ function format(date, pattern) {
         return date;
     }
 }
+/**
+ * 
+ * @param dateStr 日期格式的字符串,必要参数默认识别
+ * @param pattern 你传入字符串的格式，可选参数，如yyyy-MM-dd HH:mm:ss:SSS，默认为 yyyy-MM-dd HH:mm:ss
+ * @return Date 对象，失败返回空串
+ */
+function parse(dateStr,pattern){
+    return new Date(dateStr);
+    // let fmt = 'yyyy-MM-dd HH:mm:ss';
+    // new Date(Date.parse(dateStr));
+    // if (pattern) {
+    //     fmt = pattern;
+    // }
+    // if(dateStr&&(dateStr instanceof String||"string"===typeof(dateStr))){//确保是字符串
+        
+    // }else{
+    //     return '';
+    // }
+}
 module.exports = {
-    format: format
+    format: format,
+    parse:parse
 }

@@ -8,4 +8,12 @@ function testDateUtilsFormat(){
     console.log("testDateUtilsFormat----end");
 }
 
-testDateUtilsFormat();
+function testDateUtilsParse(){
+    console.log("testDateUtilsParse----start");
+    console.log('input:str,yyyy-MM-dd HH:mm:ss:SSS');
+    console.log('output:'+DateUtils.parse('2018年9月27日 4时50分50秒'));
+    console.log("testDateUtilsParse----end");
+}
+
+//testDateUtilsFormat();
+testDateUtilsParse();
